@@ -1,14 +1,9 @@
 ﻿using CampProject.EntityLayer.Concrete;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CampProject.DataAccessLayer.Concrete
 {
-    public class Context : DbContext
+    public class CampContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
