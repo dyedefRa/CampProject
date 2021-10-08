@@ -1,0 +1,38 @@
+---------------- EntityFramework Core Kullanmak;-----------------
+(DataAccessLayer da Context    ve 
+EntityLayer da Concrete klasorlerýnde var)
+
+1) Ef Core ekledik.
+2) Sýnýflarý oluþturduk.
+3) Context oluþturduk.  (Context : DbContext)
+4) 
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("server=DESKTOP-STGF1UC;database=CampProject;integrated security=true");
+        }
+
+        public DbSet<About> Abouts { get; set; }
+EKLEDIK
+
+5) Package Manager Console ile migration ekleyeceðiz .
+DataAccessLayer katmanýný seç
+
+€€  add-migration mig1
+
+veri tabaný oluþmadý bunu içinde ;
+
+€€ update-database
+
+TABLOLAR ARASI ILISKI KURMAK --------------------------
+6) Bilerek tablolar arasý eþleiþtirme yapmadýk.
+Category Blog arasýnda iliþki kurduk 
+
+Categoryde ;
+List<Blog>  
+Blog ta;
+Category  oluþturduk
+€€ add-migration category-blo
+€€ update-database
+
+Ayný þekilde Blog Comment arasýnda iliþki kurduk.
+

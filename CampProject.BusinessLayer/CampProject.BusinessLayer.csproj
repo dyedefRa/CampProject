@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CampProject.DataAccessLayer\CampProject.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\CampProject.EntityLayer\CampProject.EntityLayer.csproj" />
+  </ItemGroup>
+
+</Project>
