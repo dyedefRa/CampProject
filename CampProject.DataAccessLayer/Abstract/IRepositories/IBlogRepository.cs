@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CampProject.DataAccessLayer.Abstract.IRepositories
 {
-    public interface ICategoryRepository : IRepository<Category>
+    public interface ICategoryRepository : IGenericRepository<Category>
     {
         List<Category> GetLast10Category();
     }

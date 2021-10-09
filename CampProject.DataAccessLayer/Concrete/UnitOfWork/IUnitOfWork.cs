@@ -9,8 +9,12 @@ namespace CampProject.DataAccessLayer.Concrete.UnitOfWork
 {
     public interface IUnitOfWork : IDisposable
     {
-        ICategoryRepository Category { get;  }
-        IBlogRepository Blog { get;  }
+        ICategoryRepository Category { get; }
+        IBlogRepository Blog { get; }
+        ICommentRepository Comment { get; }
+        IContactRepository Contact { get; }
+        IWriterRepository Write { get; }
+        IAboutRepository About { get; }
         //int Complete();
     }
 }

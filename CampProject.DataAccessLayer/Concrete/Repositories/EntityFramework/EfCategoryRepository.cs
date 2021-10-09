@@ -1,17 +1,20 @@
 ﻿using CampProject.DataAccessLayer.Abstract.IRepositories;
-using CampProject.DataAccessLayer.Concrete.UnitOfWork;
+using CampProject.DataAccessLayer.Concrete.Repositories;
 using CampProject.EntityLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace CampProject.DataAccessLayer.Concrete.Repositories
+namespace CampProject.DataAccessLayer.Concrete.Repositories.EntityFramework
 {
-    public class CategoryRepository : Repository<Category>, ICategoryRepository
+    public class EfCategoryRepository : GenericRepository<Category>, ICategoryRepository
     {
         //Burda sorun olabılır.
         public CampContext _campContext = new CampContext();
 
-        public CategoryRepository(CampContext campContext) : base(campContext)
+        public EfCategoryRepository(CampContext campContext) : base(campContext)
         {
 
         }

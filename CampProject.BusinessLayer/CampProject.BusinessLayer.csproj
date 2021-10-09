@@ -9,4 +9,8 @@
     <ProjectReference Include="..\CampProject.EntityLayer\CampProject.EntityLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
 </Project>

@@ -1,16 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CampProject.DataAccessLayer.Abstract.IRepositories;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace CampProject.DataAccessLayer.Concrete.UnitOfWork
+namespace CampProject.DataAccessLayer.Concrete.Repositories
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         protected readonly DbContext _context;
 
-        public Repository(DbContext context)
+        public GenericRepository(DbContext context)
         {
             _context = context;
         }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace CampProject.DataAccessLayer.Concrete.UnitOfWork
+namespace CampProject.DataAccessLayer.Abstract.IRepositories
 {
-    public interface IRepository<T> where T:class
+    public interface IGenericRepository<T> where T:class
     {
         T GetById(int Id);
         List<T> List();

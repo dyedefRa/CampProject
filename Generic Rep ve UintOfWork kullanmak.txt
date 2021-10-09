@@ -1,0 +1,10 @@
+DataAccessLayer >
+
+IGenericRepository
+GenericRepository
+
+ICategoryRepository
+EfCategoryRepository
+
+IUnitOfWork
+UnitOfWork

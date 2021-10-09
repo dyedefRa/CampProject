@@ -1,10 +1,5 @@
 ﻿using CampProject.DataAccessLayer.Abstract.IRepositories;
-using CampProject.DataAccessLayer.Concrete.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using CampProject.DataAccessLayer.Concrete.Repositories.EntityFramework;
 
 namespace CampProject.DataAccessLayer.Concrete.UnitOfWork
 {
@@ -14,13 +9,21 @@ namespace CampProject.DataAccessLayer.Concrete.UnitOfWork
 
         public ICategoryRepository Category { get; private set; }
         public IBlogRepository Blog { get; private set; }
-
+        public ICommentRepository Comment { get; private set; }
+        public IContactRepository Contact { get; private set; }
+        public IWriterRepository Write { get; private set; }
+        public IAboutRepository About { get; private set; }
 
         public UnitOfWork(CampContext context)
         {
             _context = context;
-            Category = new CategoryRepository(_context);
-            Blog = new BlogRepository(_context);
+            Category = new EfCategoryRepository(_context);
+            Blog = new EfBlogRepository(_context);
+            Contact = new EfContactRepository(_context);
+            Write = new EfWriterRepository(_context);
+            About = new EfAboutRepository(_context);
+            Comment = new EfCommentRepository(_context);
+
         }
         public void Dispose()
         {

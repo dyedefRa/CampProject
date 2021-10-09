@@ -3,8 +3,8 @@
 EntityLayer da Concrete klasorlerýnde var)
 
 1) Ef Core ekledik.
-2) Sýnýflarý oluþturduk.
-3) Context oluþturduk.  (Context : DbContext)
+2) Sýnýflarý oluþturduk. (EntityLayer > Concrete e sýnýf ekledik)
+3) Context oluþturduk.  ( DataAccesLayerde Context oluþturduk)
 4) 
 protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

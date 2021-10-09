@@ -3,7 +3,7 @@ using CampProject.EntityLayer.Concrete;
 
 namespace CampProject.DataAccessLayer.Abstract.IRepositories
 {
-    public interface IBlogRepository : IRepository<Blog>
+    public interface IBlogRepository : IGenericRepository<Blog>
     {
     }
 }
