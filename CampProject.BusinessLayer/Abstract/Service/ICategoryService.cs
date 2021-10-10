@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CampProject.EntityLayer.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,7 @@ namespace CampProject.BusinessLayer.Abstract.Service
 {
    public interface ICategoryService
     {
+        List<Category> GetCategories();
+        List<Category> GetTopCategories(int count = 3);
     }
 }

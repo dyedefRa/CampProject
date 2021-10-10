@@ -17,6 +17,6 @@ namespace CampProject.EntityLayer.Concrete
         public DateTime CreatedDate { get; set; }
         public bool Status { get; set; }
 
-        public Blog Blog { get; set; }
+        public virtual Blog Blog { get; set; }
     }
 }

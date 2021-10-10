@@ -12,7 +12,10 @@ namespace CampProject.DataAccessLayer.Concrete.Repositories.EntityFramework
     public class EfCategoryRepository : GenericRepository<Category>, ICategoryRepository
     {
         //Burda sorun olabılır.
-        public CampContext _campContext = new CampContext();
+        public CampContext _campContext
+        {
+            get { return _campContext as CampContext; }
+        }
 
         public EfCategoryRepository(CampContext campContext) : base(campContext)
         {
@@ -22,6 +25,11 @@ namespace CampProject.DataAccessLayer.Concrete.Repositories.EntityFramework
         public List<Category> GetLast10Category()
         {
             return _campContext.Categories.OrderByDescending(x => x.Id).Take(10).ToList();
+        }
+
+        public List<Category> GetTopCategories(int count=3)
+        {
+            return _campContext.Categories.OrderByDescending(x => x.Blogs.Count()).Take(count).ToList();
         }
     }
 }

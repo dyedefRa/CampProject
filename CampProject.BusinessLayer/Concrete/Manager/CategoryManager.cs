@@ -13,12 +13,11 @@ namespace CampProject.BusinessLayer.Concrete.Manager
 {
     public class CategoryManager : ICategoryService
     {
-        UnitOfWork UnitOfWork = new UnitOfWork(new CampContext());
-
         ICategoryRepository _categoryRepository;
 
         public CategoryManager()
         {
+            UnitOfWork UnitOfWork = new UnitOfWork(new CampContext());
             _categoryRepository = UnitOfWork.Category;
         }
 
@@ -26,5 +25,11 @@ namespace CampProject.BusinessLayer.Concrete.Manager
         {
             return _categoryRepository.List();
         }
-    }
+
+        public List<Category> GetTopCategories(int count = 3)
+        {
+            return _categoryRepository.GetTopCategories(count);
+        }
+
+    } 
 }

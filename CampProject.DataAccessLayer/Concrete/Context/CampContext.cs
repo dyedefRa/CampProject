@@ -7,7 +7,10 @@ namespace CampProject.DataAccessLayer.Concrete
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-STGF1UC;database=CampProject;integrated security=true");
+            optionsBuilder
+                .UseSqlServer("server=DESKTOP-STGF1UC;database=CampProject;integrated security=true")
+                .UseLazyLoadingProxies(true)
+                ;
         }
 
         public DbSet<About> Abouts { get; set; }

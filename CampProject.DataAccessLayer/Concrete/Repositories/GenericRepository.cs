@@ -9,7 +9,7 @@ namespace CampProject.DataAccessLayer.Concrete.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        protected readonly DbContext _context;
+        protected  DbContext _context;
 
         public GenericRepository(DbContext context)
         {

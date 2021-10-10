@@ -1,0 +1,18 @@
+Sýnýflar arasý geçiþ yapýlmýyor. 
+Her blogun bir kategorisi var ama blogtan kategoriye geçiþ yapýlmýyor!!
+
+ÇÖZÜM ;
+
+1)entity de virtual olarak iþaretle !
+
+public virtual Category Category { get; set; }
+
+2) Microsoft.EntityFrameworkCore.Proxies i indir !
+
+3) .UseLazyLoadingProxies(true)  kullan !.
+
+=>
+  optionsBuilder
+                .UseSqlServer("server=DESKTOP-STGF1UC;database=CampProject;integrated security=true")
+                .UseLazyLoadingProxies(true)
+                ;

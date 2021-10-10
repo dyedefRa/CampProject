@@ -10,6 +10,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
       <PrivateAssets>all</PrivateAssets>
@@ -20,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CampProject.BusinessLayer\CampProject.BusinessLayer.csproj" />
+    <ProjectReference Include="..\CampProject.CoreLayer\CampProject.CoreLayer.csproj" />
     <ProjectReference Include="..\CampProject.DataAccessLayer\CampProject.DataAccessLayer.csproj" />
     <ProjectReference Include="..\CampProject.EntityLayer\CampProject.EntityLayer.csproj" />
   </ItemGroup>

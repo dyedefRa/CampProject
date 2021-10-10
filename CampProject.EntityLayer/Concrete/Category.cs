@@ -15,6 +15,6 @@ namespace CampProject.EntityLayer.Concrete
         public string Description { get; set; }
         public bool Status { get; set; }
 
-        public List<Blog> Blogs { get; set; }
+        public virtual List<Blog> Blogs { get; set; }
     }
 }

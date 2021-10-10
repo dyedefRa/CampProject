@@ -8,3 +8,5 @@ EfCategoryRepository
 
 IUnitOfWork
 UnitOfWork
+
+MAnager (dogru degýl)
