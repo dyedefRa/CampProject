@@ -11,8 +11,7 @@ namespace CampProject.CoreLayer.Extensions
         public static string FirstXLetters(this string content,int first=0,int last=100)
         {
             if (last>content.Length)           
-                last = content.Length;
-            
+                last = content.Length;           
             return content.Substring(first, last);
         }
     }

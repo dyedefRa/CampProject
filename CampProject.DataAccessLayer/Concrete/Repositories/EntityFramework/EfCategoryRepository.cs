@@ -12,10 +12,7 @@ namespace CampProject.DataAccessLayer.Concrete.Repositories.EntityFramework
     public class EfCategoryRepository : GenericRepository<Category>, ICategoryRepository
     {
         //Burda sorun olabılır.
-        public CampContext _campContext
-        {
-            get { return _campContext as CampContext; }
-        }
+        private CampContext _campContext = new CampContext();
 
         public EfCategoryRepository(CampContext campContext) : base(campContext)
         {
